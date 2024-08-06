@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Quiz from "./components/quiz/page";
 
 export default function Home() {
   return (
-    <main className=" min-h-screen  p-2">
-      
+    <main className="bg-white min-h-screen">
+      <Quiz />
     </main>
   );
 }
