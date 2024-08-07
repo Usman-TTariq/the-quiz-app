@@ -9,7 +9,7 @@ export default function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [isOptionSelected, setIsOptionSelected] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(undefined);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [answerRemarks, setAnswerRemarks] = useState("");
   const totalQuestions = questions.length;
   const nextQuestion =
@@ -206,7 +206,7 @@ export default function Quiz() {
                               );
                               setIsOptionSelected(false);
                               setAnswerRemarks("");
-                              setCurrentIndex(undefined);
+                              setCurrentIndex(0);
                             } else {
                               alert(
                                 "Please select an option before moving to the next question."
