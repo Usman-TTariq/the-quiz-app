@@ -120,35 +120,7 @@ export default function Quiz() {
         <div className="container h-220 mx-auto w-1/2 border-4 border-slate-200">
           <div className="flex flex-wrap">
             <div className="w-full">
-              {!setQuizCompleted ? (
-                <div>
-                  <div
-                    style={{
-                      marginTop: "20px",
-                      padding: "10px",
-                      backgroundColor: "#d4edda",
-                      color: "#155724",
-                      border: "1px solid #c3e6cb",
-                      borderRadius: "5px",
-                    }}
-                  >
-                    <p>Quiz has been completed!</p>
-                    <button
-                      onClick={resetQuiz}
-                      style={{
-                        padding: "10px 20px",
-                        backgroundColor: "#007bff",
-                        color: "#fff",
-                        border: "none",
-                        borderRadius: "5px",
-                        cursor: "pointer",
-                      }}
-                    >
-                      Start Quiz Again
-                    </button>
-                  </div>
-                </div>
-              ) : (
+              {!quizCompleted ? (
                 <div>
                   <div className="h-6 bg-slate-100">
                     <div
@@ -303,6 +275,18 @@ export default function Quiz() {
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <div className="bg-white mt-5 p-3">
+                    <p className="mb-4">Quiz has been completed!</p>
+                    <button
+                      onClick={resetQuiz}
+                      className="px-4 text-sm py-2 bg-white text-black border border-black rounded cursor-pointer"
+                    >
+                      Start Quiz Again
+                    </button>
                   </div>
                 </div>
               )}
